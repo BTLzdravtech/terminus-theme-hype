@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   target: 'node',
+  mode: 'development',
   entry: 'src/index.ts',
   devtool: 'source-map',
   context: __dirname,
@@ -16,7 +17,7 @@ module.exports = {
     extensions: ['.ts', '.js'],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader',
